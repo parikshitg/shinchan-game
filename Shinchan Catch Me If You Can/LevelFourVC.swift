@@ -183,6 +183,35 @@ class LevelFourVC: UIViewController {
         
         if counter == 0 {
             timer.invalidate()
+            
+            
+            
+            //creating alert
+            let alert = UIAlertController(title: "Time", message: "Your Time is Up!", preferredStyle: UIAlertController.Style.alert)
+            let ok = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                
+                self.score = 0
+                self.scoreLabel.text = "SCORE : \(self.score)"
+                self.counter = 30
+                self.timeLabel.text = "\(self.counter)"
+            }
+            alert.addAction(ok)
+            
+            //replay the level
+            let replay = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { (UIAlertAction) in
+                
+                self.score = 0
+                self.scoreLabel.text = "SCORE : \(self.score)"
+                self.counter = 30
+                self.timeLabel.text = "\(self.counter)"
+                
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LevelFourVC.countDown), userInfo: nil, repeats: true)
+                
+            }
+            alert.addAction(replay)
+            self.present(alert, animated: true, completion: nil)
+
+            
         }
     }
     
