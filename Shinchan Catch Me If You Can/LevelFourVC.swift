@@ -54,6 +54,8 @@ class LevelFourVC: UIViewController {
     var score = 0
     var counter = 0
     var timer = Timer()
+    var imageArray = [UIImageView]()
+    var hideTimer = Timer()
     
     
     override func viewDidLoad() {
@@ -145,6 +147,43 @@ class LevelFourVC: UIViewController {
         //adding gesture recognizer to SHinchan mid image
         shinchanMid.addGestureRecognizer(shinchanMidRecognizer)
         
+        
+        //adding images to image array
+        imageArray.append(shinchan1)
+        imageArray.append(shinchan2)
+        imageArray.append(shinchan3)
+        imageArray.append(shinchan4)
+        imageArray.append(shinchan5)
+        imageArray.append(shinchan6)
+        imageArray.append(shinchan7)
+        imageArray.append(shinchan8)
+        imageArray.append(shinchan9)
+        imageArray.append(shinchan10)
+        imageArray.append(shinchan11)
+        imageArray.append(shinchan12)
+        imageArray.append(himawari1)
+        imageArray.append(himawari2)
+        imageArray.append(himawari3)
+        imageArray.append(himawari4)
+        imageArray.append(himawari5)
+        imageArray.append(himawari6)
+        imageArray.append(shiro1)
+        imageArray.append(shiro2)
+        imageArray.append(shiro3)
+        imageArray.append(shiro4)
+        imageArray.append(shiro5)
+        imageArray.append(shiro6)
+        imageArray.append(harry1)
+        imageArray.append(harry2)
+        imageArray.append(mitsi1)
+        imageArray.append(mitsi2)
+        imageArray.append(shinchanMid)
+        
+        //hide all images
+        for image in imageArray{
+            image.isHidden = true
+        }
+        
     }
     
     @objc func increaseScoreShinchan(){
@@ -212,6 +251,13 @@ class LevelFourVC: UIViewController {
             self.present(alert, animated: true, completion: nil)
 
             
+        }
+    }
+    
+    
+    func hideImage() {
+        for image in imageArray {
+            image.isHidden = true
         }
     }
     
