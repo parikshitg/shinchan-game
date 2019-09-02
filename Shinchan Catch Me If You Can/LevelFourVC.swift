@@ -51,16 +51,171 @@ class LevelFourVC: UIViewController {
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    var score = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //printing score in score label
+        scoreLabel.text = "SCORE : \(score)"
+        
+        //creating gesture Recognizers for shinchan image
+        let shinchanRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer5 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer6 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer7 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer8 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer9 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer10 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer11 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        let shinchanRecognizer12 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchan))
+        
+        //creating gesture Recognizer for himawari image
+        let himawariRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreHimawari))
+        let himawariRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreHimawari))
+        let himawariRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreHimawari))
+        let himawariRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreHimawari))
+        let himawariRecognizer5 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreHimawari))
+        let himawariRecognizer6 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreHimawari))
+        
+        //creating gesture recognizer for shiro
+        let shiroRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShiro))
+        let shiroRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShiro))
+        let shiroRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShiro))
+        let shiroRecognizer4 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShiro))
+        let shiroRecognizer5 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShiro))
+        let shiroRecognizer6 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShiro))
+        
+        
+        //creating gesture Recognizer for Harry image
+        let harryRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.decreaseScoreHarry))
+        let harryRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.decreaseScoreHarry))
+        
+        //creating gesture Recognizer for Mitsi image
+        let mitsiRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.decreaseScoreMitsi))
+        let mitsiRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.decreaseScoreMitsi))
+        
+        //creating gesture recognizer to shinchan mid image
+        let shinchanMidRecognizer = UITapGestureRecognizer(target: self, action: #selector(LevelFourVC.increaseScoreShinchanTwo))
+        
+        //adding gesture recognizer to shinchan image
+        shinchan1.addGestureRecognizer(shinchanRecognizer1)
+        shinchan2.addGestureRecognizer(shinchanRecognizer2)
+        shinchan3.addGestureRecognizer(shinchanRecognizer3)
+        shinchan4.addGestureRecognizer(shinchanRecognizer4)
+        shinchan5.addGestureRecognizer(shinchanRecognizer5)
+        shinchan6.addGestureRecognizer(shinchanRecognizer6)
+        shinchan7.addGestureRecognizer(shinchanRecognizer7)
+        shinchan8.addGestureRecognizer(shinchanRecognizer8)
+        shinchan9.addGestureRecognizer(shinchanRecognizer9)
+        shinchan10.addGestureRecognizer(shinchanRecognizer10)
+        shinchan11.addGestureRecognizer(shinchanRecognizer11)
+        shinchan12.addGestureRecognizer(shinchanRecognizer12)
+        
+        //adding gesture recognizer to himawari image
+        himawari1.addGestureRecognizer(himawariRecognizer1)
+        himawari2.addGestureRecognizer(himawariRecognizer2)
+        himawari3.addGestureRecognizer(himawariRecognizer3)
+        himawari4.addGestureRecognizer(himawariRecognizer4)
+        himawari5.addGestureRecognizer(himawariRecognizer5)
+        himawari6.addGestureRecognizer(himawariRecognizer6)
+        
+        //adding gesture reognizer to shiro image
+        shiro1.addGestureRecognizer(shiroRecognizer1)
+        shiro2.addGestureRecognizer(shiroRecognizer2)
+        shiro3.addGestureRecognizer(shiroRecognizer3)
+        shiro4.addGestureRecognizer(shiroRecognizer4)
+        shiro5.addGestureRecognizer(shiroRecognizer5)
+        shiro6.addGestureRecognizer(shiroRecognizer6)
+        
+        //adding gesture recognizer to Harry image
+        harry1.addGestureRecognizer(harryRecognizer1)
+        harry2.addGestureRecognizer(harryRecognizer2)
+        
+        //adding gesture recognizer to Harry image
+        mitsi1.addGestureRecognizer(mitsiRecognizer1)
+        mitsi2.addGestureRecognizer(mitsiRecognizer2)
+        
+        //adding gesture recognizer to SHinchan mid image
+        shinchanMid.addGestureRecognizer(shinchanMidRecognizer)
+        
     }
     
-
-
+    @objc func increaseScoreShinchan(){
+        score = score + 1
+        scoreLabel.text = "SCORE : \(score)"
+    }
+    
+    @objc func increaseScoreHimawari(){
+        score = score + 2
+        scoreLabel.text = "SCORE : \(score)"
+    }
+    
+    @objc func increaseScoreShiro(){
+        score = score + 3
+        scoreLabel.text = "SCORE : \(score)"
+    }
+    
+    @objc func decreaseScoreMitsi(){
+        score = score - 5
+        scoreLabel.text = "SCORE : \(score)"
+    }
+    
+    @objc func decreaseScoreHarry(){
+        score = score - 1
+        scoreLabel.text = "SCORE : \(score)"
+    }
+    
+    @objc func increaseScoreShinchanTwo(){
+        score = score + 5
+        scoreLabel.text = "SCORE : \(score)"
+    }
+    
     @IBAction func levelFourStartButton(_ sender: Any) {
+        
+        //making shinchan images user interaction enabled
+        shinchan1.isUserInteractionEnabled = true
+        shinchan2.isUserInteractionEnabled = true
+        shinchan3.isUserInteractionEnabled = true
+        shinchan4.isUserInteractionEnabled = true
+        shinchan5.isUserInteractionEnabled = true
+        shinchan6.isUserInteractionEnabled = true
+        shinchan7.isUserInteractionEnabled = true
+        shinchan8.isUserInteractionEnabled = true
+        shinchan9.isUserInteractionEnabled = true
+        shinchan10.isUserInteractionEnabled = true
+        shinchan11.isUserInteractionEnabled = true
+        shinchan12.isUserInteractionEnabled = true
+        
+        //making himawari images user interaction enabled
+        himawari1.isUserInteractionEnabled = true
+        himawari2.isUserInteractionEnabled = true
+        himawari3.isUserInteractionEnabled = true
+        himawari4.isUserInteractionEnabled = true
+        himawari5.isUserInteractionEnabled = true
+        himawari6.isUserInteractionEnabled = true
+        
+        //making shiro images user interaction enabled
+        shiro1.isUserInteractionEnabled = true
+        shiro2.isUserInteractionEnabled = true
+        shiro3.isUserInteractionEnabled = true
+        shiro4.isUserInteractionEnabled = true
+        shiro5.isUserInteractionEnabled = true
+        shiro6.isUserInteractionEnabled = true
+        
+        //making Harry images user interaction enabled
+        harry1.isUserInteractionEnabled = true
+        harry2.isUserInteractionEnabled = true
+        
+        //making Mitsi images user interaction enabled
+        mitsi1.isUserInteractionEnabled = true
+        mitsi2.isUserInteractionEnabled = true
+        
+        //making shinchanmid image user interaction enabled
+        shinchanMid.isUserInteractionEnabled = true
     }
 }
