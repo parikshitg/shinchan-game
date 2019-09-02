@@ -20,6 +20,7 @@
 		99D6E0DF231ABF0000054606 /* LevelTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6E0DE231ABF0000054606 /* LevelTwoVC.swift */; };
 		99D6E0E1231B838D00054606 /* LevelThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6E0E0231B838D00054606 /* LevelThreeVC.swift */; };
 		99D6E0E3231B852300054606 /* shiro.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D6E0E2231B852300054606 /* shiro.png */; };
+		99E0F0A5231D039B0065DEE0 /* LevelFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E0F0A4231D039B0065DEE0 /* LevelFourVC.swift */; };
 		99E931D1231CBA7B00CBC2A9 /* mitsi.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E931CE231CBA7800CBC2A9 /* mitsi.png */; };
 		99E931D2231CBA7B00CBC2A9 /* harry2.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E931CF231CBA7A00CBC2A9 /* harry2.png */; };
 		99E931D3231CBA7B00CBC2A9 /* shinchan2.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E931D0231CBA7B00CBC2A9 /* shinchan2.png */; };
@@ -41,6 +42,7 @@
 		99D6E0DE231ABF0000054606 /* LevelTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoVC.swift; sourceTree = "<group>"; };
 		99D6E0E0231B838D00054606 /* LevelThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeVC.swift; sourceTree = "<group>"; };
 		99D6E0E2231B852300054606 /* shiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shiro.png; sourceTree = "<group>"; };
+		99E0F0A4231D039B0065DEE0 /* LevelFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourVC.swift; sourceTree = "<group>"; };
 		99E931CE231CBA7800CBC2A9 /* mitsi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mitsi.png; sourceTree = "<group>"; };
 		99E931CF231CBA7A00CBC2A9 /* harry2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = harry2.png; sourceTree = "<group>"; };
 		99E931D0231CBA7B00CBC2A9 /* shinchan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinchan2.png; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				9925876F23195CD700EC141C /* AppDelegate.swift */,
 				9925877123195CD700EC141C /* ViewController.swift */,
 				9925877323195CD700EC141C /* Main.storyboard */,
+				99E0F0A4231D039B0065DEE0 /* LevelFourVC.swift */,
 				99D6E0E0231B838D00054606 /* LevelThreeVC.swift */,
 				99D6E0DE231ABF0000054606 /* LevelTwoVC.swift */,
 				99258788231A37A800EC141C /* LevelOneVC.swift */,
@@ -179,6 +182,7 @@
 				9925877823195CD700EC141C /* Shinchan_Catch_Me_If_You_Can.xcdatamodeld in Sources */,
 				9925877223195CD700EC141C /* ViewController.swift in Sources */,
 				99D6E0DF231ABF0000054606 /* LevelTwoVC.swift in Sources */,
+				99E0F0A5231D039B0065DEE0 /* LevelFourVC.swift in Sources */,
 				99258789231A37A800EC141C /* LevelOneVC.swift in Sources */,
 				9925877023195CD700EC141C /* AppDelegate.swift in Sources */,
 			);

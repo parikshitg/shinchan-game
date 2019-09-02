@@ -59,6 +59,9 @@
                                 <state key="normal" title="LEVEL 4">
                                     <color key="titleShadowColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vsE-t0-6Bg" kind="show" id="V1K-Fu-I1y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF3-Ot-zoF">
                                 <rect key="frame" x="131" y="419" width="114" height="44"/>
@@ -602,6 +605,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ph3-gA-b7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="896.40179910044981"/>
+        </scene>
+        <!--Level FourVC-->
+        <scene sceneID="M6M-aD-S32">
+            <objects>
+                <viewController id="vsE-t0-6Bg" customClass="LevelFourVC" customModule="Shinchan_Catch_Me_If_You_Can" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w9B-lN-GOD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e2o-wx-xSz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDe-gZ-GtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="896"/>
         </scene>
         <!--Level OneVC-->
         <scene sceneID="hxl-s1-IwP">
