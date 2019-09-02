@@ -222,7 +222,11 @@ class LevelFourVC: UIViewController {
         
         if counter == 0 {
             timer.invalidate()
+            hideTimer.invalidate()
             
+            for image in imageArray{
+                image.isHidden = true
+            }
             
             
             //creating alert
@@ -245,6 +249,7 @@ class LevelFourVC: UIViewController {
                 self.timeLabel.text = "\(self.counter)"
                 
                 self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LevelFourVC.countDown), userInfo: nil, repeats: true)
+                self.hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(LevelFourVC.hideImage), userInfo: nil, repeats: true)
                 
             }
             alert.addAction(replay)
@@ -255,10 +260,13 @@ class LevelFourVC: UIViewController {
     }
     
     
-    func hideImage() {
+    @objc func hideImage() {
         for image in imageArray {
             image.isHidden = true
         }
+        
+        let randomNumber = Int(arc4random_uniform(UInt32(Int32(imageArray.count - 1))))
+        imageArray[randomNumber].isHidden = false
     }
     
     @IBAction func levelFourStartButton(_ sender: Any) {
@@ -307,5 +315,6 @@ class LevelFourVC: UIViewController {
         
         counter = 30
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LevelFourVC.countDown), userInfo: nil, repeats: true)
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(LevelFourVC.hideImage), userInfo: nil, repeats: true)
     }
 }
