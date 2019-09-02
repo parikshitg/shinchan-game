@@ -61,6 +61,17 @@ class LevelFourVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //check the high scores
+        let levelFourHighScore = UserDefaults.standard.object(forKey: "levelfourhighscore")
+        if levelFourHighScore == nil{
+            highScoreLabel.text = "0"
+        }
+        
+        if let newScore = levelFourHighScore as? Int
+        {
+                highScoreLabel.text = String(newScore)
+        }
+        
         //printing score in score label
         scoreLabel.text = "SCORE : \(score)"
         
@@ -228,6 +239,11 @@ class LevelFourVC: UIViewController {
                 image.isHidden = true
             }
             
+            //checking the highscore
+            if self.score > Int(highScoreLabel.text!)!{
+                UserDefaults.standard.set(self.score, forKey: "levelfourhighscore")
+                highScoreLabel.text = String(self.score)
+            }
             
             //creating alert
             let alert = UIAlertController(title: "Time", message: "Your Time is Up!", preferredStyle: UIAlertController.Style.alert)
