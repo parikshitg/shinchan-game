@@ -328,7 +328,7 @@ class LevelFourVC: UIViewController {
         //making shinchanmid image user interaction enabled
         shinchanMid.isUserInteractionEnabled = true
         
-        
+        //timer logic
         counter = 30
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LevelFourVC.countDown), userInfo: nil, repeats: true)
         hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(LevelFourVC.hideImage), userInfo: nil, repeats: true)
