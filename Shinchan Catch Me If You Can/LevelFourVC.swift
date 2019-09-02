@@ -52,6 +52,8 @@ class LevelFourVC: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     var score = 0
+    var counter = 0
+    var timer = Timer()
     
     
     override func viewDidLoad() {
@@ -175,6 +177,15 @@ class LevelFourVC: UIViewController {
         scoreLabel.text = "SCORE : \(score)"
     }
     
+    @objc func countDown() {
+        counter = counter - 1
+        timeLabel.text = "\(counter)"
+        
+        if counter == 0 {
+            timer.invalidate()
+        }
+    }
+    
     @IBAction func levelFourStartButton(_ sender: Any) {
         
         //making shinchan images user interaction enabled
@@ -217,5 +228,9 @@ class LevelFourVC: UIViewController {
         
         //making shinchanmid image user interaction enabled
         shinchanMid.isUserInteractionEnabled = true
+        
+        
+        counter = 30
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LevelFourVC.countDown), userInfo: nil, repeats: true)
     }
 }
