@@ -17,7 +17,7 @@
 		99258787231A2F7E00EC141C /* catchmeifyoucan.png in Resources */ = {isa = PBXBuildFile; fileRef = 99258786231A2F7E00EC141C /* catchmeifyoucan.png */; };
 		99258789231A37A800EC141C /* LevelOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99258788231A37A800EC141C /* LevelOneVC.swift */; };
 		9925878B231A9A7F00EC141C /* himawari.png in Resources */ = {isa = PBXBuildFile; fileRef = 9925878A231A9A7E00EC141C /* himawari.png */; };
-		99B5F0AC231E437F00DA3EB9 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 99B5F0AB231E437F00DA3EB9 /* bgm.mp3 */; };
+		99B5F0B1231E946100DA3EB9 /* bgmLevelOne.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 99B5F0B0231E946100DA3EB9 /* bgmLevelOne.mp3 */; };
 		99D6E0DF231ABF0000054606 /* LevelTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6E0DE231ABF0000054606 /* LevelTwoVC.swift */; };
 		99D6E0E1231B838D00054606 /* LevelThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6E0E0231B838D00054606 /* LevelThreeVC.swift */; };
 		99D6E0E3231B852300054606 /* shiro.png in Resources */ = {isa = PBXBuildFile; fileRef = 99D6E0E2231B852300054606 /* shiro.png */; };
@@ -40,7 +40,7 @@
 		99258786231A2F7E00EC141C /* catchmeifyoucan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catchmeifyoucan.png; sourceTree = "<group>"; };
 		99258788231A37A800EC141C /* LevelOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOneVC.swift; sourceTree = "<group>"; };
 		9925878A231A9A7E00EC141C /* himawari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = himawari.png; sourceTree = "<group>"; };
-		99B5F0AB231E437F00DA3EB9 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
+		99B5F0B0231E946100DA3EB9 /* bgmLevelOne.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmLevelOne.mp3; sourceTree = "<group>"; };
 		99D6E0DE231ABF0000054606 /* LevelTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoVC.swift; sourceTree = "<group>"; };
 		99D6E0E0231B838D00054606 /* LevelThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeVC.swift; sourceTree = "<group>"; };
 		99D6E0E2231B852300054606 /* shiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shiro.png; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		9925876E23195CD700EC141C /* Shinchan Catch Me If You Can */ = {
 			isa = PBXGroup;
 			children = (
-				99B5F0AB231E437F00DA3EB9 /* bgm.mp3 */,
+				99B5F0B0231E946100DA3EB9 /* bgmLevelOne.mp3 */,
 				99258786231A2F7E00EC141C /* catchmeifyoucan.png */,
 				99258784231A2EAD00EC141C /* shinchan.png */,
 				9925878A231A9A7E00EC141C /* himawari.png */,
@@ -164,11 +164,11 @@
 				9925877D23195CD800EC141C /* LaunchScreen.storyboard in Resources */,
 				9925878B231A9A7F00EC141C /* himawari.png in Resources */,
 				99E931D3231CBA7B00CBC2A9 /* shinchan2.png in Resources */,
-				99B5F0AC231E437F00DA3EB9 /* bgm.mp3 in Resources */,
 				99E931D1231CBA7B00CBC2A9 /* mitsi.png in Resources */,
 				9925877A23195CD800EC141C /* Assets.xcassets in Resources */,
 				99E931D2231CBA7B00CBC2A9 /* harry2.png in Resources */,
 				9925877523195CD700EC141C /* Main.storyboard in Resources */,
+				99B5F0B1231E946100DA3EB9 /* bgmLevelOne.mp3 in Resources */,
 				99258785231A2EAD00EC141C /* shinchan.png in Resources */,
 				99258787231A2F7E00EC141C /* catchmeifyoucan.png in Resources */,
 				99D6E0E3231B852300054606 /* shiro.png in Resources */,

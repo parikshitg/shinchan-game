@@ -43,7 +43,7 @@ class LevelOneVC: UIViewController {
         
         //background audio setup
         do{
-            let audioPath = Bundle.main.path(forResource: "bgm", ofType: "mp3")
+            let audioPath = Bundle.main.path(forResource: "bgmLevelOne", ofType: "mp3")
             try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
         }catch{
             print("ERROR in BACKGROUND AUDIO")
