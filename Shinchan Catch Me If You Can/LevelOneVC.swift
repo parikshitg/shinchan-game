@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LevelOneVC: UIViewController {
 
-    
     @IBOutlet weak var shinchan1: UIImageView!
     @IBOutlet weak var shinchan2: UIImageView!
     @IBOutlet weak var shinchan3: UIImageView!
@@ -30,8 +30,24 @@ class LevelOneVC: UIViewController {
     var hideTimer = Timer()
     var shinchanArray = [UIImageView]()
     
+    var player:AVAudioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //custom back button at navigation controller
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(LevelOneVC.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
+
+        
+        //background audio setup
+        do{
+            let audioPath = Bundle.main.path(forResource: "bgm", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        }catch{
+            print("ERROR in BACKGROUND AUDIO")
+        }
         
         
         //check the highscores
@@ -103,6 +119,9 @@ class LevelOneVC: UIViewController {
             timer.invalidate()
             hideTimer.invalidate()
             
+            //stops the background music when timer reaches 0
+            player.stop()
+            
             //hides all images when counter = 0
             for shinchan in shinchanArray{
                 shinchan.isHidden = true
@@ -130,11 +149,14 @@ class LevelOneVC: UIViewController {
             //for replaying the level
             let replay = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { (UIAlertAction) in
                 //this will happen when user clicks on Replay because we are using handlers
+                
                 self.score = 0
                 self.scoreLabel.text = "SCORE : \(self.score)"
                 
                 self.counter = 30
                 self.timeLabel.text = "\(self.counter)"
+                
+                self.player.play()
                 
                 //run timer again
                 self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LevelOneVC.countDown), userInfo: nil, repeats: true)
@@ -165,6 +187,8 @@ class LevelOneVC: UIViewController {
     }
    
     @IBAction func levelOneStartButton(_ sender: Any) {
+        //plays background music when start button is pressed
+        player.play()
         
         //enabling images for userInteraction
         shinchan1.isUserInteractionEnabled = true
@@ -184,6 +208,17 @@ class LevelOneVC: UIViewController {
         
         //foe unhiding random shinchan images repeatedly after 0.5 seconds
         hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(LevelOneVC.hideShinchan), userInfo: nil, repeats: true)
+    }
+    
+    
+    //custom back button for stopping audio and timer when goes to home view controller
+    @objc func back(sender: UIBarButtonItem) {
+        player.stop()
+        score = 0
+        scoreLabel.text = "SCORE : /(score)"
+        counter = 30
+        timeLabel.text = "\(counter)"
+        _ = navigationController?.popViewController(animated: true)
     }
     
 }
